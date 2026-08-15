@@ -12,7 +12,7 @@ brand
 
 ## Product Purpose
 
-Lingsong Xiong（熊凌崧）的个人学术主页：展示研究定位、论文、会议报告、教学与完整 CV；
+Lingsong Xiong 的个人学术主页：展示研究定位、论文、会议报告、教学与完整 CV；
 中英双语（`/` 英文、`/zh/` 中文），基于 academicpages/Jekyll 托管在 GitHub Pages。
 成功标准：访问者立刻感到"这是一位严谨、活跃的青年学者"，且能无障碍地读到内容本身。
 

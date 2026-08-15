@@ -1,4 +1,4 @@
-# Lingsong Xiong / 熊凌崧 — Academic Website
+# Lingsong Xiong — Academic Website
 
 基于 [Academic Pages](https://github.com/academicpages/academicpages.github.io) 模板的中英双语学术主页。
 Based on the [Academic Pages](https://github.com/academicpages/academicpages.github.io) template, with a custom English/Chinese bilingual setup.
