@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.75em;
   margin-top: 0.5em;
-  margin-bottom: 2.25em; // breathing room before the next section heading
+  margin-bottom: 3.25em; // breathing room before the next section heading
 }
 
 .about__badge {
@@ -472,6 +472,11 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 .qr-tip {
   position: relative;
   display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
   cursor: help;
   text-decoration: underline dashed;
   text-underline-offset: 3px;
@@ -506,7 +511,8 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   }
 
   &:hover .qr-tip__pop,
-  &:focus .qr-tip__pop {
+  &:focus .qr-tip__pop,
+  &:focus-within .qr-tip__pop {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
