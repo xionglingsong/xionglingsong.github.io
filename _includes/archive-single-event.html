@@ -1,0 +1,40 @@
+{% include base_path %}
+
+{% comment %}
+  Event list entry for talks and teaching pages.
+  Accessibility notes:
+  - single meta line with consistent field order: type · venue · location · date
+  - machine-readable <time datetime="...">; shown as month-year to avoid
+    false day-level precision for entries dated by month
+  - well-formed HTML (the old talk include left a <p> unclosed)
+  - heading level h2 sits directly under the page's h1 title
+{% endcomment %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="list__item">
+  <article class="archive__item pub-item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <h2 class="archive__item-title pub-item__title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    </h2>
+
+    {% if post.venue or post.date %}
+      <p class="pub-item__meta">
+        {% if post.type %}<span>{{ post.type }}</span>{% if post.venue or post.location or post.date %} · {% endif %}{% endif %}
+        {% if post.venue %}<span class="pub-item__venue"><i>{{ post.venue }}</i></span>{% if post.location or post.date %} · {% endif %}{% endif %}
+        {% if post.location %}<span>{{ post.location }}</span>{% if post.date %} · {% endif %}{% endif %}
+        {% if post.when %}<span>{{ post.when }}</span>{% elsif post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>{% endif %}
+      </p>
+    {% endif %}
+
+    {% if post.content != empty and post.content != nil %}
+      <div class="pub-item__abstract" itemprop="description">{{ post.content | markdownify }}</div>
+    {% endif %}
+
+  </article>
+</div>

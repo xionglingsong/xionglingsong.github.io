@@ -1,0 +1,42 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar or site.author.orcid or site.author.researchgate %}
+  <div class="wordwrap">You can also find my articles on
+  {%- if site.author.googlescholar %} <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif -%}
+  {%- if site.author.orcid %}{% if site.author.googlescholar %},{% endif %} <a href="{{ site.author.orcid }}">ORCID</a>{% endif -%}
+  {%- if site.author.researchgate %}{% if site.author.googlescholar or site.author.orcid %}, and{% endif %} <a href="{{ site.author.researchgate }}">ResearchGate</a>{% endif -%}
+  .</div>
+{% endif %}
+
+{% include base_path %}
+
+<!-- New style rendering if publication categories are defined -->
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% if post.lang == 'zh' %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single-pub.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% if post.lang != 'zh' %}
+      {% include archive-single-pub.html %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

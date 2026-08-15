@@ -1,0 +1,62 @@
+/* ==========================================================================
+    DEFAULT THEME - DARK VERSION
+    ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #6A9CFB; /* brightened Klein blue */
+$gray                       : #7a8288;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+
+$background                 : #474747;
+$background-light           : mix(#fff, $background, 80%);
+$background-lighter         : mix(#fff, $background, 90%);
+$text                       : #ffffff;
+$link                       : #6A9CFB;
+$link-dark                  : mix(#000, $link, 25%);
+$link-light                 : mix(#fff, $link, 25%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #6A9CFB;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Dark theme for the site — brightened Klein blue on deep blue-black */
+html[data-theme="dark"] {
+    --global-base-color                 : oklch(0.70 0.15 262);     /* brightened Klein blue #6A9CFB */
+    --global-bg-color                   : oklch(0.205 0.018 264);
+    --global-footer-bg-color            : oklch(0.185 0.016 264);
+    --global-border-color               : oklch(0.300 0.018 264);
+    --global-dark-border-color          : oklch(0.380 0.020 264);
+    --global-code-background-color      : oklch(0.170 0.015 264);
+    --global-code-text-color            : oklch(0.850 0.010 264);
+    --global-fig-caption-color          : oklch(0.680 0.012 264);
+    --global-link-color                 : oklch(0.70 0.15 262);     /* 6.6:1 on dark bg */
+    --global-link-color-hover           : oklch(0.78 0.13 262);
+    --global-link-color-visited         : oklch(0.62 0.10 262);
+    --global-masthead-link-color        : oklch(0.900 0.008 264);
+    --global-masthead-link-color-hover  : oklch(0.70 0.15 262);
+    --global-text-color                 : oklch(0.900 0.008 264);
+    --global-text-color-light           : oklch(0.680 0.012 264);
+    --global-thead-color                : oklch(0.260 0.018 264);
+    --global-selection-text-color       : oklch(0.145 0.018 264);
+}
+
+html[data-theme="dark"] ::selection {
+    background: var(--global-base-color);
+    color: var(--global-selection-text-color);
+}
+

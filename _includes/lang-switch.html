@@ -1,0 +1,25 @@
+{% comment %}
+  Language switch shown in the masthead.
+
+  URL convention: English pages live at /..., Chinese pages at /zh/...
+  The switch maps the current page to its counterpart in the other language
+  by adding/removing the /zh prefix. A page can override the computed target
+  with `lang-alt: /path/` in its front matter (useful when the two versions
+  are not a mirror of each other).
+{% endcomment %}
+{% if page.lang-alt %}
+  {% assign lang_target = page.lang-alt %}
+{% else %}
+  {% if page.lang == 'zh' %}
+    {% assign lang_target = page.url | remove_first: '/zh' %}
+    {% if lang_target == empty %}{% assign lang_target = '/' %}{% endif %}
+  {% else %}
+    {% assign lang_target = '/zh' | append: page.url %}
+  {% endif %}
+{% endif %}
+
+{% if page.lang == 'zh' %}
+  <a role="button" href="{{ lang_target | relative_url }}" title="Switch to English">EN</a>
+{% else %}
+  <a role="button" href="{{ lang_target | relative_url }}" title="切换到中文">中文</a>
+{% endif %}

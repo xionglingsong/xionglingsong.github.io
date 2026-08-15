@@ -1,0 +1,54 @@
+/* ==========================================================================
+    DEFAULT THEME - LIGHT VERSION
+    ========================================================================== */
+/* Color codes used for the theme */
+$primary-color              : #002FA7; /* International Klein Blue */
+$gray                       : #7a8288;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #1444C7;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Default light theme for the site — Klein blue on blue-tinted paper */
+:root {
+    --global-base-color                 : oklch(0.379 0.195 263.2);   /* International Klein Blue #002FA7 */
+    --global-bg-color                   : oklch(0.988 0.004 264);
+    --global-footer-bg-color            : oklch(0.958 0.006 264);
+    --global-border-color               : oklch(0.922 0.007 264);
+    --global-dark-border-color          : oklch(0.850 0.012 264);
+    --global-code-background-color      : oklch(0.968 0.005 264);
+    --global-code-text-color            : oklch(0.335 0.016 264);
+    --global-fig-caption-color          : oklch(0.520 0.014 264);
+    --global-link-color                 : oklch(0.452 0.208 264);    /* lifted Klein blue, 7.6:1 */
+    --global-link-color-hover           : oklch(0.360 0.150 264);    /* 10.9:1 */
+    --global-link-color-visited         : oklch(0.452 0.090 264);    /* desaturated Klein */
+    --global-masthead-link-color        : oklch(0.335 0.016 264);
+    --global-masthead-link-color-hover  : oklch(0.452 0.208 264);
+    --global-text-color                 : oklch(0.335 0.016 264);
+    --global-text-color-light           : oklch(0.520 0.014 264);
+    --global-thead-color                : oklch(0.952 0.007 264);
+    --global-selection-text-color       : oklch(0.975 0.010 264);
+}
+
+::selection {
+    background: var(--global-base-color);
+    color: var(--global-selection-text-color);
+}
+

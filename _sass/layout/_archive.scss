@@ -1,0 +1,409 @@
+/* ==========================================================================
+   ARCHIVE
+   ========================================================================== */
+
+.archive {
+  margin-bottom: 2em;
+
+  @include breakpoint($medium) {
+    @include span(12 of 12);
+  }
+
+  @include breakpoint($large) {
+    @include span(9 of 12 last);
+    @include prefix(0.5 of 12);
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        box-shadow: 0 0 10px rgba(#000, 0.25);
+      }
+    }
+  }
+}
+
+.archive__subtitle {
+  margin: 1.414em 0 0;
+  padding-bottom: 0.5em;
+  font-size: $type-size-5;
+  color: var(--global-text-color-light);
+  border-bottom: 1px solid var(--global-border-color);
+
+  + .list__item .archive__item-title {
+    margin-top: 0.5em;
+  }
+}
+
+.archive__item-title {
+  margin-bottom: 0.25em;
+  font-family: $sans-serif-narrow;
+
+  a + a {
+    opacity: 0.5;
+  }
+}
+
+/* remove border*/
+.page__content {
+
+  .archive__item-title {
+    margin-top: 1em;
+    border-bottom: none;
+  }
+}
+
+.archive__item-excerpt {
+  margin-top: 0;
+  font-size: $type-size-6;
+
+  & + p {
+    text-indent: 0;
+  }
+}
+
+/* ==========================================================================
+   Publication list entries (archive-single-pub.html)
+   Order: title / venue / authors / year / abstract / citation
+   ========================================================================== */
+
+.pub-item {
+  margin-bottom: 1.75em;
+}
+
+.pub-item__title {
+  margin: 0 0 0.2em;
+  font-size: $type-size-5;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.archive__subtitle + .list__item .pub-item__title {
+  margin-top: 0.25em;
+}
+
+.pub-item__meta {
+  margin: 0 0 0.5em;
+  font-size: $type-size-6 * 1.0833; // ~13px
+  line-height: 1.4;
+  color: var(--global-text-color-light);
+
+  .pub-item__venue i {
+    font-style: italic;
+  }
+}
+
+.pub-item__abstract {
+  margin: 0 0 0.6em;
+  font-size: $type-size-6 * 1.1667; // ~14px
+  line-height: 1.55;
+  color: var(--global-text-color);
+
+  &.pub-item__abstract--secondary {
+    font-size: $type-size-6 * 1.0833; // ~13px
+    color: var(--global-text-color-light);
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25em;
+  }
+
+  li {
+    margin-bottom: 0.15em;
+  }
+}
+
+/* Small field label: Abstract / 摘要 / Keywords / 关键词 / Citation / 引用 */
+.pub-item__label {
+  margin-right: 0.5em;
+  font-weight: 600;
+  font-size: $type-size-7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.pub-item__status {
+  font-weight: 600;
+  color: var(--global-link-color);
+}
+
+/* Indexing badges: SSCI / CSSCI etc., shown after the venue in the meta line */
+.pub-badge {
+  display: inline-block;
+  margin-left: 0.45em;
+  padding: 0 0.5em;
+  border: 1px solid var(--global-base-color);
+  border-radius: 3px;
+  font-size: $type-size-8; // ~10px
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--global-base-color);
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.pub-index-note {
+  margin-left: 0.4em;
+  font-size: $type-size-8; // ~10px
+  white-space: nowrap;
+}
+
+.pub-item__badges {
+  margin: 0 0 0.3em;
+}
+
+.pub-item__keywords {
+  margin: 0 0 0.75em;
+
+  .kw {
+    display: inline-block;
+    margin: 0 0.3em 0.3em 0;
+    padding: 0.05em 0.65em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 999px;
+    background: var(--global-thead-color);
+    font-size: $type-size-7; // ~11px
+    line-height: 1.6;
+    color: var(--global-text-color-light);
+  }
+}
+
+.pub-item__citation {
+  margin: 0;
+  padding-top: 0.5em;
+  border-top: 1px solid var(--global-border-color);
+  font-size: $type-size-6; // ~12px
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+.pub-item__links {
+  margin: 0.6em 0 0;
+
+  .pub-dl {
+    display: inline-block;
+    padding: 0.2em 0.9em;
+    border: 1px solid var(--global-base-color);
+    border-radius: 4px;
+    font-size: $type-size-7; // ~11px
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--global-base-color);
+    text-decoration: none;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+
+    i {
+      margin-right: 0.4em;
+    }
+
+    &:hover {
+      background-color: var(--global-base-color);
+      color: var(--global-selection-text-color);
+      text-decoration: none;
+    }
+  }
+}
+
+/* Publication detail page front-matter block (pub-detail.html) */
+.pub-detail {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--global-border-color);
+
+  .pub-item__meta {
+    font-size: $type-size-5 * 0.8125; // ~13px
+  }
+
+  .pub-item__abstract {
+    font-size: $type-size-5 * 0.875; // ~14px
+    margin-bottom: 0.75em;
+
+    &.pub-item__abstract--secondary {
+      font-size: $type-size-5 * 0.8125;
+    }
+  }
+}
+
+.archive__item-teaser {
+  border-radius: $border-radius;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.archive__item:hover {
+  .archive__item-teaser {
+    box-shadow: 0 0 10px rgba(#000, 0.25);
+  }
+
+  .archive__item-title {
+    text-decoration: underline;
+  }
+}
+
+
+/*
+   List view
+   ========================================================================== */
+
+.list__item {
+  @include breakpoint($medium) {
+    padding-right: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint($large) {
+    padding-right: $right-sidebar-width;
+  }
+
+  @include breakpoint($x-large) {
+    padding-right: $right-sidebar-width-wide;
+  }
+
+  .page__meta {
+    margin: 0 0 4px;
+  }
+}
+
+
+/*
+   Grid view
+   ========================================================================== */
+
+.grid__item {
+  margin-bottom: 2em;
+
+  .page__meta {
+    margin: 0 0 4px;
+  }
+
+  .archive__item-title {
+    margin-top: 0.5em;
+    font-size: $type-size-5;
+  }
+
+  .archive__item-excerpt {
+    display: none;
+  }
+
+  @include breakpoint($small) {
+    @include gallery(5 of 10);
+    .archive__item-teaser {
+      max-height: 200px;
+    }
+  }
+
+  @include breakpoint($medium) {
+    margin-left: 0; /* reset before mixin does its thing*/
+    margin-right: 0; /* reset before mixin does its thing*/
+    @include gallery(2.5 of 10);
+
+    .archive__item-teaser {
+      max-height: 120px;
+    }
+
+    .archive__item-excerpt {
+      display: block;
+      font-size: $type-size-6;
+    }
+  }
+}
+
+
+/*
+   Features
+   ========================================================================== */
+
+.feature__wrapper {
+  @include clearfix();
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.feature__item {
+  margin-bottom: 2em;
+  font-size: 1.25rem;
+
+  @include breakpoint($small) {
+    margin-bottom: 0;
+    @include gallery(4 of 12);
+
+    .feature__item-teaser {
+      max-height: 200px;
+      overflow: hidden;
+    }
+  }
+
+  &--left {
+    @include full();
+    font-size: 1.25rem;
+
+    .archive__item-teaser {
+      margin-bottom: 2em;
+    }
+
+    @include breakpoint($small) {
+      .archive__item-teaser {
+        @include span(5 of 12);
+      }
+
+      .archive__item-body {
+        @include span(7 of 12 last);
+        @include prefix(0.5 of 12);
+        @include suffix(1 of 12);
+      }
+    }
+  }
+
+  &--right {
+    @include full();
+    font-size: 1.25rem;
+
+    .archive__item-teaser {
+      margin-bottom: 2em;
+    }
+
+    @include breakpoint($small) {
+      text-align: right;
+
+      .archive__item-teaser {
+        @include span(5 of 12 rtl);
+      }
+
+      .archive__item-body {
+        @include span(7 of 12 last rtl);
+        @include prefix(0.5 of 12);
+        @include suffix(1 of 12);
+      }
+    }
+  }
+
+  &--center {
+    @include full();
+    font-size: 1.25rem;
+
+    .archive__item-teaser {
+      margin-bottom: 2em;
+    }
+
+    @include breakpoint($small) {
+      text-align: center;
+
+      .archive__item-teaser {
+        margin: 0 auto;
+        width: span(5 of 12);
+      }
+
+      .archive__item-body {
+        margin: 0 auto;
+        width: span(7 of 12);
+      }
+    }
+  }
+}

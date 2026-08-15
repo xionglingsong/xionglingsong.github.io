@@ -1,0 +1,18 @@
+# 中文导航（仅在 lang: zh 的页面上显示，即 /zh/ 路径下的页面）。
+# 英文版对应文件：_data/navigation.yml
+
+main:
+  - title: "发表论文"
+    url: /zh/publications/
+
+  - title: "学术报告"
+    url: /zh/talks/
+
+  - title: "教学"
+    url: /zh/teaching/
+
+  - title: "博客"
+    url: /zh/year-archive/
+
+  - title: "简历"
+    url: /zh/cv/

@@ -1,0 +1,56 @@
+---
+layout: archive
+title: "发表论文"
+permalink: /zh/publications/
+lang: zh
+author_profile: true
+---
+
+<!-- 编辑说明：本页自动列出 _publications 目录中 lang: zh 的条目。
+     添加中文论文条目：复制对应的英文条目文件，把 permalink 改为 /zh/publication/...，
+     并在 front matter 中加一行 lang: zh，标题与摘要翻译成中文即可。 -->
+
+{% if site.author.googlescholar or site.author.orcid or site.author.researchgate %}
+  <div class="wordwrap">完整论文列表也可通过
+  {%- if site.author.googlescholar %} <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif -%}
+  {%- if site.author.orcid %}{% if site.author.googlescholar %}、{% endif %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif -%}
+  {%- if site.author.researchgate %}{% if site.author.googlescholar or site.author.orcid %} 与{% endif %}<a href="{{ site.author.researchgate }}">ResearchGate</a>{% endif -%}
+  查看。</div>
+{% endif %}
+
+{% include base_path %}
+
+{% assign zh_count = 0 %}
+{% for post in site.publications %}
+  {% if post.lang == 'zh' %}
+    {% assign zh_count = zh_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% if zh_count == 0 %}
+  <p><em>中文条目正在建设中，请先访问<a href="/publications/">英文版发表论文页面</a>。</em></p>
+{% endif %}
+
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% if post.lang != 'zh' %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title_zh | default: category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single-pub.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% if post.lang == 'zh' %}
+      {% include archive-single-pub.html %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

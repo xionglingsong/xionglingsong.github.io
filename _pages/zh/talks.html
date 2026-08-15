@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "学术报告"
+permalink: /zh/talks/
+lang: zh
+author_profile: true
+---
+
+<!-- 编辑说明：本页自动列出 _talks 目录中 lang: zh 的条目。 -->
+
+{% assign zh_count = 0 %}
+{% for post in site.talks %}
+  {% if post.lang == 'zh' %}
+    {% assign zh_count = zh_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% if zh_count == 0 %}
+  <p><em>中文条目正在建设中，请先访问<a href="/talks/">英文版学术报告页面</a>。</em></p>
+{% endif %}
+
+{% for post in site.talks reversed %}
+  {% if post.lang == 'zh' %}
+    {% include archive-single-event.html %}
+  {% endif %}
+{% endfor %}

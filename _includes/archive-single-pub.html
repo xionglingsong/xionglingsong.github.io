@@ -1,0 +1,85 @@
+{% include base_path %}
+
+{% comment %}
+  Publication list entry.
+  Field order: title → venue → authors → year → abstract(s) → keywords → citation.
+
+  Language rules:
+    - EN page: Chinese-language papers show EN + ZH abstracts (中英对照);
+      English-language papers show the EN abstract only.
+    - ZH page: each paper shows its native-language abstract only.
+  Keywords render as pill-shaped tags.
+{% endcomment %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign kws = post.keywords %}
+{% if page.lang == 'zh' and post.keywords_zh %}
+  {% assign kws = post.keywords_zh %}
+{% endif %}
+
+<div class="list__item">
+  <article class="archive__item pub-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
+
+    <h3 class="pub-item__title archive__item-title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    </h3>
+
+    {% if post.venue or post.authors %}
+      <p class="pub-item__meta">
+        {% if post.venue %}<span class="pub-item__venue"><i>{{ post.venue }}</i></span>{% endif %}
+        {% for tag in post.index_tags %}<span class="pub-badge">{{ tag }}</span>{% endfor %}
+        {% if post.index_note %}<span class="pub-index-note">{{ post.index_note }}</span>{% endif %}
+        {% if post.venue and post.authors %} · {% endif %}
+        {% if post.authors %}<span itemprop="author">{{ post.authors }}</span>{% endif %}
+        {% if post.venue or post.authors %} · {{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
+        {% if post.status %} · <span class="pub-item__status">{{ post.status }}</span>{% endif %}
+      </p>
+    {% endif %}
+
+    {% if page.lang == 'zh' %}
+      {% comment %}ZH page: native-language abstract only{% endcomment %}
+      {% if post.abstract_zh %}
+        <p class="pub-item__abstract" itemprop="description"><span class="pub-item__label">摘要</span>{{ post.abstract_zh }}</p>
+      {% elsif post.abstract_en %}
+        <p class="pub-item__abstract" itemprop="description"><span class="pub-item__label">Abstract</span>{{ post.abstract_en }}</p>
+      {% endif %}
+    {% else %}
+      {% comment %}EN page: bilingual display for Chinese papers, EN only otherwise{% endcomment %}
+      {% if post.abstract_en %}
+        <p class="pub-item__abstract" itemprop="description"><span class="pub-item__label">Abstract</span>{{ post.abstract_en }}</p>
+      {% endif %}
+      {% if post.abstract_zh %}
+        <p class="pub-item__abstract pub-item__abstract--secondary"><span class="pub-item__label">摘要</span>{{ post.abstract_zh }}</p>
+      {% endif %}
+    {% endif %}
+
+    {% if kws and kws != empty %}
+      <p class="pub-item__keywords">
+        <span class="pub-item__label">{% if page.lang == 'zh' %}关键词{% else %}Keywords{% endif %}</span>
+        {% for kw in kws %}<span class="kw">{{ kw }}</span>{% endfor %}
+      </p>
+    {% endif %}
+
+    {% if post.citation %}
+      <p class="pub-item__citation">
+        <span class="pub-item__label">{% if page.lang == 'zh' %}引用{% else %}Citation{% endif %}</span>
+        {{ post.citation }}
+      </p>
+    {% endif %}
+
+    {% if post.paperurl %}
+      <p class="pub-item__links">
+        <a class="pub-dl" href="{{ post.paperurl }}">
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          {% if page.lang == 'zh' %}下载论文{% else %}Download Paper{% endif %}
+        </a>
+      </p>
+    {% endif %}
+
+  </article>
+</div>

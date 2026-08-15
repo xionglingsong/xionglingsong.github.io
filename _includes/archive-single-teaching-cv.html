@@ -1,0 +1,23 @@
+{% include base_path %}
+
+{% comment %}
+  Teaching entry on the CV page, using the cv-item disclosure pattern:
+  summary = title (role + course) + semester; body = course meta + duty bullets.
+{% endcomment %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<details class="cv-item">
+  <summary>
+    <span class="cv-item__head">{{ title }}</span>
+    <span class="cv-item__date">{% if post.when %}{{ post.when }}{% else %}{{ post.date | date: "%Y" }}{% endif %}</span>
+  </summary>
+  <div class="cv-item__body">
+    <p class="pub-item__meta">{{ post.type }}{% if post.venue %} · {{ post.venue }}{% endif %}{% if post.location %} · {{ post.location }}{% endif %}</p>
+    {{ post.content | markdownify }}
+  </div>
+</details>
