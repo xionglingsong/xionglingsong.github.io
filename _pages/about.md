@@ -22,7 +22,7 @@ News
   </li>
   <li>
     <span class="news-timeline__date">May 2026</span>
-    <span class="news-timeline__body">New article in <i>Technology Enhanced Foreign Language Education</i> (CSSCI, in Chinese): <a href="https://doi.org/10.20139/j.issn.1001-5795.20260203">development and validation of <strong>GoInterpreter</strong>, a generative-AI-based intelligent tutoring system for interpreting</a>.</span>
+    <span class="news-timeline__body">New article in <i>Technology Enhanced Foreign Language Education</i> (CSSCI, in Chinese): <a href="https://doi.org/10.20139/j.issn.1001-5795.20260203">Development and validation of <strong><i>GoInterpreter</i></strong>: A Generative-AI-based intelligent tutoring system for interpreting</a>.</span>
   </li>
   <li>
     <span class="news-timeline__date">Mar 2026</span>
@@ -65,7 +65,7 @@ I build working tools for the problems I study and teach:
   * [GoInterpreter](https://gointerpreter.tech/): an intelligent tutoring system for interpreter training, powered by generative AI
   * [译了么](https://ylm.life/) (*Translated?*): a web-based practice platform for student translators
 * **Software**: [SwordfishEdu](https://github.com/xionglingsong/SwordfishEdu), a translation practice and AI scoring platform built on the Swordfish CAT tool, combining ATA error classification with CATTI-style scoring
-* **WeChat mini-program**: MyTranslate, a workbench for freelance translators that manages the whole business loop from inquiry, quoting, and task scheduling to delivery, receivables tracking, installment payment recording, and income statistics
+* **WeChat mini-program**: <span class="qr-tip" tabindex="0">译了么(MyTranslate)<span class="qr-tip__pop"><img src="/images/mytranslate-qr.png" alt="QR code of the 译了么 WeChat mini-program" width="150"><span class="qr-tip__caption">Scan with WeChat to open the mini-program</span></span></span>, a workbench for freelance translators that manages the whole business loop from inquiry, quoting, and task scheduling to delivery, receivables tracking, installment payment recording, and income statistics
 * **Zotero add-on**: [zotero-chapterize](https://github.com/xionglingsong/zotero-chapterize), splits full-book PDFs into chapter-level items with enriched metadata in your Zotero library
 * **Chrome extension**: [ODHT](https://github.com/xionglingsong/ODHT), an online dictionary helper that looks up words and phrases on any webpage, with LLM-powered sentence translation and Anki flashcard creation
 * **RSS**: [rss-translation-studies](https://github.com/xionglingsong/rss-translation-studies), enriched RSS feeds for translation and interpreting studies journals
