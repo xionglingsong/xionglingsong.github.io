@@ -137,7 +137,7 @@ International research and study
   </ul></div>
 </details>
 
-Relevant Professional Experience
+Relevant professional experience
 ======
 <details class="cv-item">
   <summary><span class="cv-item__head"><strong>Seminar Organizer</strong>, SISU&ndash;Leicester Translation Studies Salon, Shanghai International Studies University, Shanghai</span><span class="cv-item__date">Oct 2024 &ndash; Dec 2025</span></summary>
@@ -197,7 +197,7 @@ Skills and certifications
 * **Research methods**: EEG and eye-tracking co-registration, corpus linguistics, content analysis
 * **Programming**: Python (NLP, text analysis, data visualization), R (statistical modeling, bibliometrics), JavaScript (front-end, audio and real-time processing, AI integration)
 
-Academic and Community Service
+Academic and community service
 ======
 * Reviewer, TED Translators
 * Organizer, SISU–Leicester Translation Studies Salon (2024–2025)

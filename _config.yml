@@ -100,19 +100,19 @@ author:
 # title_zh 为该分类在中文页面上显示的标题
 publication_category:
   manuscripts:
-    title: 'Research Articles'
+    title: 'Research articles'
     title_zh: '研究论文'
   reviews:
-    title: 'Review Articles'
+    title: 'Review articles'
     title_zh: '综述论文'
   books:
-    title: 'Books and Book Chapters'
+    title: 'Books and book chapters'
     title_zh: '专著与章节'
   thesis:
     title: 'Thesis'
     title_zh: '学位论文'
   conferences:
-    title: 'Conference Papers'
+    title: 'Conference papers'
     title_zh: '会议论文'
 
 # Site Settings
