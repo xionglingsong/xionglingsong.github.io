@@ -147,7 +147,7 @@ redirect_from:
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>撰稿人与编辑</strong>，"翻译技术教育与研究"微信公众号</span><span class="cv-item__date">2023 年 10 月–2024 年 12 月</span></summary>
+  <summary><span class="cv-item__head"><strong>撰稿人与编辑</strong>，"翻译技术教育与研究"微信公众号，线上</span><span class="cv-item__date">2023 年 10 月–2024 年 12 月</span></summary>
   <div class="cv-item__body"><ul>
     <li>撰写翻译技术原创文章；获评"优秀编辑"（2024 年 2 月）</li>
   </ul></div>
@@ -161,14 +161,14 @@ redirect_from:
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>翻译与本地化实习生</strong>，创思立信科技（EC Innovations）生命科学事业部</span><span class="cv-item__date">2022 年 2–8 月</span></summary>
+  <summary><span class="cv-item__head"><strong>翻译与本地化实习生</strong>，创思立信科技（EC Innovations）生命科学事业部，重庆</span><span class="cv-item__date">2022 年 2–8 月</span></summary>
   <div class="cv-item__body"><ul>
     <li>为强生、信达、再鼎、卫材、山德士、CDS 等 15 余家全球制药企业提供中英本地化服务</li>
     <li>累计审校约 20 万词、翻译约 2 万词、审读约 3.5 万词，内容涵盖临床、药理与法规文件</li>
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>翻译与审校实习生</strong>，快译商城（QTransMall.com）</span><span class="cv-item__date">2021 年 7–8 月</span></summary>
+  <summary><span class="cv-item__head"><strong>翻译与审校实习生</strong>，快译商城（QTransMall.com），成都</span><span class="cv-item__date">2021 年 7–8 月</span></summary>
   <div class="cv-item__body"><ul>
     <li>翻译、编辑与质检合计约 20 万词，领域涉及生物医药、消费电子、法律合同、政府文书与财务报告</li>
   </ul></div>

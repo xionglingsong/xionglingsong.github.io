@@ -147,7 +147,7 @@ Relevant Professional Experience
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>Writer and Editor</strong>, Translation Technology Education and Research WeChat Account</span><span class="cv-item__date">Oct 2023 &ndash; Dec 2024</span></summary>
+  <summary><span class="cv-item__head"><strong>Writer and Editor</strong>, Translation Technology Education and Research WeChat Account, Online</span><span class="cv-item__date">Oct 2023 &ndash; Dec 2024</span></summary>
   <div class="cv-item__body"><ul>
     <li>Authored original articles on translation technology; awarded &ldquo;Outstanding Editor&rdquo; (February 2024)</li>
   </ul></div>
@@ -161,14 +161,14 @@ Relevant Professional Experience
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>Translation and Localization Trainee</strong>, Life Sciences BU, EC Innovations</span><span class="cv-item__date">Feb &ndash; Aug 2022</span></summary>
+  <summary><span class="cv-item__head"><strong>Translation and Localization Trainee</strong>, Life Sciences BU, EC Innovations, Chongqing</span><span class="cv-item__date">Feb &ndash; Aug 2022</span></summary>
   <div class="cv-item__body"><ul>
     <li>Delivered Chinese&ndash;English localization services for 15+ global pharmaceutical companies (CDS, JNJ, Innovent, Zai Lab, Eisai, Sandoz, etc.)</li>
     <li>Edited approximately 200,000 words, translated approximately 20,000 words, and proofread approximately 35,000 words of clinical, pharmacological, and regulatory documentation</li>
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>Translator and Proofreader Trainee</strong>, QTransMall.com</span><span class="cv-item__date">Jul &ndash; Aug 2021</span></summary>
+  <summary><span class="cv-item__head"><strong>Translator and Proofreader Trainee</strong>, QTransMall.com, Chengdu</span><span class="cv-item__date">Jul &ndash; Aug 2021</span></summary>
   <div class="cv-item__body"><ul>
     <li>Translated, edited, and quality-checked approximately 200,000 words across domains including biomedicine, consumer electronics, legal contracts, government communications, and financial reporting</li>
   </ul></div>
