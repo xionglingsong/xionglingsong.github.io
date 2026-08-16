@@ -23,7 +23,7 @@ Education
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>M.A.</strong> in Medical Translation, Chongqing Medical University, Chongqing</span><span class="cv-item__date">Sep 2020 &ndash; Jun 2023</span></summary>
+  <summary><span class="cv-item__head"><strong>M.TI.</strong> in Medical Translation, Chongqing Medical University, Chongqing</span><span class="cv-item__date">Sep 2020 &ndash; Jun 2023</span></summary>
   <div class="cv-item__body"><ul>
     <li>Thesis: &ldquo;Chinese&ndash;English Subtitle Translation of Documentary <i>The Lockdown: One Month in Wuhan</i> from the Perspective of Multimodal Discourse Analysis&rdquo;</li>
     <li>Advisor: Professor Luo Ruifeng</li>
