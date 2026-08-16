@@ -12,7 +12,6 @@ redirect_from:
 
 {% include base_path %}
 
-<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button></p>
 
 <script>
   window.addEventListener('beforeprint', function () {
@@ -204,3 +203,5 @@ redirect_from:
 * 上外–莱斯特翻译研究沙龙组织者（2024–2025）
 * 知远·英文成长计划（面向残障人士的公益英语项目）志愿教师，为视障学习者讲授英语，2021
 * 英国中文培优项目（#MEP）访华研学夏令营（Intensive Study in China Summer Camp）：线下助教（2019）、线上中文教师（2021）
+
+<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i>下载简历（PDF）</button></p>

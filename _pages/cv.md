@@ -12,7 +12,6 @@ redirect_from:
 
 {% include base_path %}
 
-<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button></p>
 
 <script>
   window.addEventListener('beforeprint', function () {
@@ -204,3 +203,5 @@ Academic and Community Service
 * Organizer, SISU–Leicester Translation Studies Salon (2024–2025)
 * Volunteer English teacher for learners with visual impairments, Zhiyuan English Growth Program (a nonprofit English program for people with disabilities), 2021
 * Teaching assistant (on-site, 2019) and Chinese teacher (online, 2021), UK Mandarin Excellence Programme (#MEP) Intensive Study in China Summer Camp
+
+<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i>Download this CV as PDF</button></p>

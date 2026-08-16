@@ -526,7 +526,34 @@
 
 /* Print-friendly CV: hide chrome, expand layout */
 .cv-download {
-  margin: 0 0 1.25em;
+  margin: 2.5em 0 0.5em;
+  padding-top: 1.75em;
+  border-top: 1px solid var(--global-border-color);
+  text-align: center;
+
+  .pub-dl {
+    display: inline-block;
+    padding: 0.5em 1.6em;
+    border: 1px solid var(--global-base-color);
+    border-radius: 999px;
+    background: transparent;
+    font-family: inherit;
+    font-size: $type-size-6 * 1.1667; // ~14px
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--global-base-color);
+    cursor: pointer;
+    transition: background-color 0.15s ease-out, color 0.15s ease-out;
+
+    i {
+      margin-right: 0.5em;
+    }
+
+    &:hover {
+      background: var(--global-base-color);
+      color: var(--global-selection-text-color);
+    }
+  }
 }
 
 @media print {
