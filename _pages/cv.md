@@ -194,7 +194,7 @@ Skills and certifications
 ======
 * **Languages**: Chinese (native), English (advanced, TEM-8), Spanish (elementary)
 * **Certification**: CATTI Level 1 Translator and Reviewer (Chinese–English, highest tier); CATTI Level 2 Consecutive Interpreter (Chinese–English); Registered TED Talks Subtitler
-* **Research methods**: EEG and eye-tracking co-registration, corpus linguistics, content analysis
+* **Research methods**: EEG and eye-tracking co-registration, surveys, interviews, cued retrospection, ethnography, corpus linguistics, content analysis, multimodal critical discourse analysis, Q methodology
 * **Programming**: Python (NLP, text analysis, data visualization), R (statistical modeling, bibliometrics), JavaScript (front-end, audio and real-time processing, AI integration)
 
 Academic and community service
