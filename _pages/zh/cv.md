@@ -12,6 +12,21 @@ redirect_from:
 
 {% include base_path %}
 
+<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button></p>
+
+<script>
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      d.dataset.wasOpen = d.open; d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      if (d.dataset.wasOpen !== undefined) d.open = d.dataset.wasOpen === 'true';
+    });
+  });
+</script>
+
 教育经历
 ======
 <details class="cv-item">
@@ -123,10 +138,10 @@ redirect_from:
   </ul></div>
 </details>
 
-职业经历
+相关职业经历
 ======
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>沙龙组织者</strong>，上外–莱斯特翻译研究沙龙，上海外国语大学</span><span class="cv-item__date">2024 年 10 月–2025 年 12 月</span></summary>
+  <summary><span class="cv-item__head"><strong>沙龙组织者</strong>，上外–莱斯特翻译研究沙龙，上海外国语大学，上海</span><span class="cv-item__date">2024 年 10 月–2025 年 12 月</span></summary>
   <div class="cv-item__body"><ul>
     <li>组织月度沙龙 11 期，累计 300 余人次参与，促成上外与莱斯特大学等地研究者的对话</li>
   </ul></div>
@@ -138,7 +153,7 @@ redirect_from:
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>专职译员/口译员</strong>，重庆市人民政府外事办公室翻译中心</span><span class="cv-item__date">2022 年 8 月–2024 年 6 月</span></summary>
+  <summary><span class="cv-item__head"><strong>专职译员/口译员</strong>，重庆市人民政府外事办公室翻译中心，重庆</span><span class="cv-item__date">2022 年 8 月–2024 年 6 月</span></summary>
   <div class="cv-item__body"><ul>
     <li>为百余场活动提供交替传译和同声传译，服务对象包括市领导、各国驻华使节及领事官员</li>
     <li>为"一带一路"科技交流大会、中新金融峰会、中国国际智能产业博览会（智博会）等国际峰会翻译会议材料</li>
@@ -183,7 +198,7 @@ redirect_from:
 * **研究方法**：EEG 与眼动协同记录、语料库语言学、内容分析
 * **编程**：Python（NLP、文本分析、数据可视化）、R（统计建模、文献计量）、JavaScript（前端、音频与实时处理、AI 集成）
 
-学术服务
+学术与社区服务
 ======
 * TED Translators 审校
 * 上外–莱斯特翻译研究沙龙组织者（2024–2025）

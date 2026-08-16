@@ -12,6 +12,21 @@ redirect_from:
 
 {% include base_path %}
 
+<p class="cv-download"><button class="pub-dl" type="button" onclick="window.print()"><i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF</button></p>
+
+<script>
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      d.dataset.wasOpen = d.open; d.open = true;
+    });
+  });
+  window.addEventListener('afterprint', function () {
+    document.querySelectorAll('details').forEach(function (d) {
+      if (d.dataset.wasOpen !== undefined) d.open = d.dataset.wasOpen === 'true';
+    });
+  });
+</script>
+
 Education
 ======
 <details class="cv-item">
@@ -123,10 +138,10 @@ International research and study
   </ul></div>
 </details>
 
-Professional experience
+Relevant Professional Experience
 ======
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>Seminar Organizer</strong>, SISU&ndash;Leicester Translation Studies Salon, Shanghai International Studies University</span><span class="cv-item__date">Oct 2024 &ndash; Dec 2025</span></summary>
+  <summary><span class="cv-item__head"><strong>Seminar Organizer</strong>, SISU&ndash;Leicester Translation Studies Salon, Shanghai International Studies University, Shanghai</span><span class="cv-item__date">Oct 2024 &ndash; Dec 2025</span></summary>
   <div class="cv-item__body"><ul>
     <li>Organized 11 monthly sessions attracting 300+ attendees, facilitating dialogue between SISU and University of Leicester researchers and beyond</li>
   </ul></div>
@@ -138,7 +153,7 @@ Professional experience
   </ul></div>
 </details>
 <details class="cv-item">
-  <summary><span class="cv-item__head"><strong>In-house Translator and Interpreter</strong>, Chongqing Translation &amp; Interpretation Center, Foreign Affairs Office of Chongqing Municipal Government</span><span class="cv-item__date">Aug 2022 &ndash; Jun 2024</span></summary>
+  <summary><span class="cv-item__head"><strong>In-house Translator and Interpreter</strong>, Chongqing Translation &amp; Interpretation Center, Foreign Affairs Office of Chongqing Municipal Government, Chongqing</span><span class="cv-item__date">Aug 2022 &ndash; Jun 2024</span></summary>
   <div class="cv-item__body"><ul>
     <li>Provided consecutive and simultaneous interpreting for 100+ events involving municipal leaders, foreign ambassadors, and consular officials</li>
     <li>Translated conference materials for international summits including the Belt and Road Science and Technology Exchange Conference, China-Singapore Financial Summit, and Smart China Expo</li>
@@ -183,7 +198,7 @@ Skills and certifications
 * **Research methods**: EEG and eye-tracking co-registration, corpus linguistics, content analysis
 * **Programming**: Python (NLP, text analysis, data visualization), R (statistical modeling, bibliometrics), JavaScript (front-end, audio and real-time processing, AI integration)
 
-Service
+Academic and Community Service
 ======
 * Reviewer, TED Translators
 * Organizer, SISU–Leicester Translation Studies Salon (2024–2025)
